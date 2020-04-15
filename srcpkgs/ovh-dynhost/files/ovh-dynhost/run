@@ -1,0 +1,4 @@
+#!/bin/sh
+if [ -f /etc/ovh-dynhost.toml ]; then
+	exec /usr/bin/ovh-dynhost /etc/ovh-dynhost.toml
+fi

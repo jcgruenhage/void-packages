@@ -1,0 +1,21 @@
+# Template file for 'ovh-dynhost'
+pkgname=ovh-dynhost
+version=0.1.0
+revision=1
+wrksrc=${pkgname}
+build_style=cargo
+hostmakedepends="pkg-config"
+makedepends="libressl-devel"
+short_desc="OVH dynamic DNS daemon"
+maintainer="Jan Christian Grünhage <jan.christian@gruenhage.xyz>"
+license="AGPL-3.0-only"
+homepage="https://git.jcg.re/jcgruenhage/ovh-dynhost"
+distfiles="https://git.jcg.re/jcgruenhage/ovh-dynhost/archive/v${version}.tar.gz"
+checksum=723411459c4734aed8115254051223a5dec3a86d559814287a8c141e50d586c7
+
+post_install() {
+	vlicense LICENSE.md
+	vdoc README.md
+	vsconf config.sample.toml
+	vsv ovh-dynhost
+}
