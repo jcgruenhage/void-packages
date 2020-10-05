@@ -1,6 +1,6 @@
 # Template file for 'bandwhich'
 pkgname=bandwhich
-version=0.17.0
+version=0.19.0
 revision=1
 build_style=cargo
 short_desc="Terminal bandwidth utilization tool"
@@ -8,7 +8,7 @@ maintainer="Jan Christian Grünhage <jan.christian@gruenhage.xyz>"
 license="MIT"
 homepage="https://github.com/imsnif/bandwhich"
 distfiles="${homepage}/archive/${version}.tar.gz"
-checksum=9bcde0e10d0a601105d89fa808c0ee2c7880de40877619ae5350b9e2c9e4f343
+checksum=82ad604e2b80d4434633860dd81a1d73cd59d54bde7241f4e86c95900912befc
 
 post_install() {
 	vlicense LICENSE.md
