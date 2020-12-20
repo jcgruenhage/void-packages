@@ -1,6 +1,6 @@
 # Template file for 'i3status-rust'
 pkgname=i3status-rust
-version=0.14.2
+version=0.14.3
 revision=1
 build_style=cargo
 hostmakedepends="pkg-config"
@@ -11,7 +11,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/greshake/i3status-rust"
 changelog="https://raw.githubusercontent.com/greshake/i3status-rust/master/NEWS.md"
 distfiles="https://github.com/greshake/i3status-rust/archive/v${version}.tar.gz"
-checksum=66a11cbcfa515c761701788edd573d408391c024086219d8b6641333129a6f87
+checksum=84b2446b86d034cd29695222929bb8b74b8b8974b2e60601a630a121a16ca982
 
 post_install() {
 	vman man/i3status-rs.1
