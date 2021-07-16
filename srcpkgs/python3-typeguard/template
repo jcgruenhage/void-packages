@@ -1,0 +1,17 @@
+# Template file for 'python3-typeguard'
+pkgname=python3-typeguard
+version=2.12.1
+revision=1
+wrksrc="${pkgname/python3-/}-${version}"
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+short_desc="Run-time type checker for python"
+maintainer="Jan Christian Grünhage <jan.christian@gruenhage.xyz>"
+license="MIT"
+homepage="https://github.com/agronholm/typeguard"
+distfiles="${PYPI_SITE}/t/typeguard/typeguard-${version}.tar.gz"
+checksum=c2af8b9bdd7657f4bd27b45336e7930171aead796711bc4cfc99b4731bb9d051
+
+post_install() {
+	vlicense LICENSE
+}
