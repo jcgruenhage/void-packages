@@ -1,18 +1,18 @@
 # Template file for 'python3-ansible-lint'
 pkgname=python3-ansible-lint
-version=4.3.5
-revision=2
-wrksrc="ansible-lint-${version}"
+version=5.0.12
+revision=1
+wrksrc="${pkgname/python3-/}-${version}"
 build_style=python3-module
-hostmakedepends="python3-setuptools"
-depends="ansible python3-six python3-yaml python3-ruamel.yaml"
+hostmakedepends="python3-pip python3-wheel"
+depends="ansible-core python3-six python3-yaml python3-ruamel.yaml python3-tenacity python3-enrich python3-wcmatch"
+checkdepends="tox ${depends}"
 short_desc="Linter for Ansible files"
 maintainer="Joseph LaFreniere <joseph@lafreniere.xyz>"
 license="MIT"
-homepage="https://github.com/willthames/ansible-lint"
-changelog="https://raw.githubusercontent.com/willthames/ansible-lint/master/CHANGELOG.md"
+homepage="https://github.com/ansible-community/ansible-lint"
 distfiles="${PYPI_SITE}/a/ansible-lint/ansible-lint-${version}.tar.gz"
-checksum=bec230cf5fcc4d976246d4170da3ae289715f99185529ca8bba4b3c173035656
+checksum=f2b0b74bd05cf55f0bb45304767e1862ed62c05def06e1f03aa2c2d39c67907c
 
 post_patch() {
 	# scm versioning is broken in this release
